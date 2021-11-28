@@ -13,7 +13,7 @@
     <None Include=".msync\Login.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include=".msync\Status.json">
+    <None Include=".msync\RepositoryStatus.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -2,7 +2,7 @@
   "profiles": {
     "morenote-sync-cli": {
       "commandName": "Project",
-      "commandLineArgs": "login -u  12345@qq.com -p 12345 -r https://baidu.com"
+      "commandLineArgs": "clone -remote https://leanote.com -email your-email@qq.com -passowrd your-password"
     }
   }
 }

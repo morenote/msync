@@ -28,13 +28,12 @@ public class Program
         printer.WriteSuccess(cmd.Print());
        
         Console.WriteLine("=================");
-        AppService app=new AppService(cmd);
+        AppService app=new AppService(cmd,printer);
         switch (cmd.MainCommand)
         {
             case "init":
                 app.Init();
                 break;
-
             case "clone":
                 app.Clone();
                 break;

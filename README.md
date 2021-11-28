@@ -17,7 +17,7 @@ msync是一个用于同步leanote笔记数据的cli工具，你可以使用命�
 
 ```shell
 #步骤1 克隆远端数据到本地（开发中）
-msync clone -remote https://leanote.com -email your-email@qq.com -passowrd your-password
+msync clone -remote https://leanote.com -email your-email@qq.com -password your-password
 msync clone -remote https://leanote.com -token your-token
 #步骤2 更新笔记 拉取远程的笔记同时把本地的笔记更新到远端（开发中）
 msync update 
@@ -31,6 +31,7 @@ msync status 观察同步情况
 msync gc     删除缓存文件和临时文件，尽可能的压缩笔记数据、图片、附件
 msync watch  持续监听文件变化，自动执行msync update 
 msync repair -a  xxx.tar.gz 使用归档文件修复数据
+msync login  -email your-email@qq.com -passowrd your-password 重新登录，如果token失效
 ```
 
 ## 开发指引
