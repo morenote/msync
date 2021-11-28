@@ -6,10 +6,20 @@
     <RootNamespace>morenote_sync_cli</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>msync</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Model\" />
+    <None Include=".msync\Login.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include=".msync\Status.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\DTO\" />
   </ItemGroup>
 
 </Project>
