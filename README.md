@@ -10,8 +10,14 @@ msync是一个用于同步leanote笔记数据的cli工具，你可以使用命�
 
 -   [ ] 同步远端笔记数据到本地
 -   [ ] 同步本地笔记数据到远端
--   [ ] 支持图片URL处理，无需担心图片裂开
+-   [ ] 图片URL自动处理，无需图床
 -   [ ] 支持笔记数据备份和修复
+-   [ ] 兼容其他笔记软件
+    -   [ ] VS code
+    -   [ ] Typora
+    -   [ ] Mark Text
+    -   [ ] VNote
+
 
 ## 快速使用
 
@@ -38,7 +44,7 @@ msync login  -email your-email@qq.com -passowrd your-password 重新登录，如
 
 msync使用C#开发
 
-开发工具：vs2020社区版
+开发工具：VS2020社区版
 
 ## 版本
 
