@@ -10,20 +10,19 @@ namespace morenote_sync_cli.Service.Remote
 {
     public class RemoteAuthService
     {
-        string url;
+        private string url;
+
         public RemoteAuthService(string url)
         {
             this.url = url;
-
         }
-        public AuthOk Login(string email,string pwd)
+
+        public AuthOk Login(string email, string pwd)
         {
-           var json=  HttpClientUtil.HttpGet($"{this.url}/api/Auth/login?email={email}&pwd={pwd}");
-
             
-            var authOk=AuthOk.InstanceFormJson(json);
+            var json = HttpClientUtil.HttpGet($"{this.url}/api/Auth/login?email={email}&pwd={pwd}");
+            var authOk = AuthOk.InstanceFormJson(json);
             return authOk;
-
         }
     }
 }

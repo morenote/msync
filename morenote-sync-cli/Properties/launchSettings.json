@@ -1,8 +1,7 @@
 {
   "profiles": {
     "morenote-sync-cli": {
-      "commandName": "Project",
-      "commandLineArgs": "clone -remote https://leanote.com -email your-email@qq.com -passowrd your-password"
+      "commandName": "Project"
     }
   }
 }

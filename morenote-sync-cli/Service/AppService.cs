@@ -15,9 +15,9 @@ namespace morenote_sync_cli.Service
     public class AppService
     {
         private CommandModel cmd;
-        private LocalNoteRepository localNoteRepository;
+       
         private IPrinter printer;
-
+        LocalNoteRepository localNoteRepository;
         public AppService(CommandModel cmd, IPrinter printer)
         {
             this.cmd = cmd;
@@ -56,7 +56,7 @@ namespace morenote_sync_cli.Service
         public void Clone()
         {   
             Init();
-
+           
             var token = string.Empty;
             if (cmd.IsExistParameter("-token"))
             {
@@ -76,9 +76,14 @@ namespace morenote_sync_cli.Service
                     else
                     {
                         printer.WriteError(authOk.ToString());
-                    }
 
+                    }
                     localNoteRepository.InitUserInfo(authOk, cmd);
+                    RemoteNoteBookService remoteNoteBookService=new RemoteNoteBookService(cmd.GetParameterValue("-remote"));
+                    var books=remoteNoteBookService.GetNotebooks(authOk.Token);
+                    printer.WriteSuccess("已经请求到bookList");
+                    localNoteRepository.InitBooks(books);
+
                 }
             }
         }

@@ -23,13 +23,19 @@ namespace morenote_sync_cli.Models.Model
             this.Username = authOk.Username;
         }
 
-        public string toJson()
+        public static RepositoryStatus InstanceFormJson(string json)
+        {
+            var repositoryStatus = JsonSerializer.Deserialize<RepositoryStatus>(json, MyJsonConvert.GetSimpleOptions());
+            return repositoryStatus;
+        }
+
+        public string ToJson()
         {
             string json = JsonSerializer.Serialize(this, MyJsonConvert.GetSimpleOptions());
             return json;
         }
 
-        public string toBeautifulJson()
+        public string ToBeautifulJson()
         {
             string json = JsonSerializer.Serialize(this, MyJsonConvert.GetBeautifulOptions());
             return json;
