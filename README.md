@@ -1,18 +1,22 @@
-# morenote-sync-cli
+# morenote+sync+cli=msync❤️
 
 >   保持本地笔记与云端的双向同步和备份
 
 ## 概述  
 
-msync是一个用于同步morenote笔记数据的cli工具，你可以使用命令行下载远端数据到本地或者上传本地数据到远端或者备份你的笔记数据。
+msync是一个用于同步morenote笔记数据的命令行工具，你可以借助msync双向同步你本地的笔记数据到leanote&morenote。
 
 ## 特性
 
 -   [ ] 同步远端笔记数据到本地
 -   [ ] 同步本地笔记数据到远端
--   [ ] 图片URL自动处理，无需图床
+-   [ ] 本地图片自动处理，无需图床
+-   [ ] 用自己喜欢❤️的笔记软件编辑笔记
+-   [ ] 不需要担心服务器宕机丢失笔记数据
+-   [ ] 支持笔记加密
 -   [ ] 支持笔记数据备份和修复
 -   [ ] 完全兼容leanote和morenote
+-   [ ] 支持绑定git操作，直接备份到github
 -   [ ] 兼容其他笔记软件
     -   [ ] VS code
     -   [ ] Typora
@@ -54,16 +58,3 @@ msync使用C#开发
 ## 感谢
 
 [taozhang-tt/leanote-sync: Apache-2.0 License](https://github.com/taozhang-tt/leanote-sync)
-
-
-
-
-
-
-
-
-
-
-
-
-
